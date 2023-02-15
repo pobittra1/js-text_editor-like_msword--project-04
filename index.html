@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-editor</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font awesome cdn link -->
+
+    <!-- tailwind css link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind css link -->
+</head>
+<body class="bg-slate-200 mt-24">
+    <div class="content-area w-3/4 mx-auto shadow-lg shadow-gray-400">
+       <h1 class="text-center py-4 mb-8 text-3xl">created <span class="text-lime-800 font-bold capitalize">text editor</span> like ms-word</h1>
+       <div class="style-line flex w-full flex-col md:flex-row text-center justify-between align-center px-8">
+            <div class="first-section">
+                <span onclick="bold()"><i class="fa-solid fa-bold"></i></span>
+                <span onclick="italic()" class="mx-2"><i class="fa-solid fa-italic"></i></span>
+                <span onclick="underline()"><i class="fa-solid fa-underline"></i></span>
+            </div>
+            <div class="second-section my-4 md:my-0">
+                <span onclick="leftAlign()"><i class="fa-solid fa-align-left"></i></span>
+                <span onclick="centerAlign()" class="mx-2"><i class="fa-solid fa-align-center"></i></span>
+                <span onclick="rightAlign()"><i class="fa-solid fa-align-right"></i></span>
+                <span onclick="justifyAlign()" class="ml-2"><i class="fa-solid fa-align-justify"></i></span>
+            </div>
+            <div class="last-section">
+                <input onchange="fontSize()" id="fontSize" class="w-10" type="number" value="17">
+                <button class="mx-2">aA</button>
+                <input id="colorField" onchange="colorField()" type="color">
+            </div>
+       </div>
+       <hr class="w-full border-b-2 border-gray-500 my-4">
+       <div class="mx-auto w-11/12">
+        <textarea class="w-full outline-0 p-4 mb-6 h-72 resize-none text-xl" name="" id="textarea-text" cols="30" rows="10"></textarea>
+       </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
